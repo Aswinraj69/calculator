@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        body{
+            /* background-image: linear-gradient(to bottom right,#f1aa89,#c4c5ff); */
+            /* background: rgb(233, 223, 223); */
+            background-image: url(./calculator.jpg);
+            background-size: cover;
+        }
+        *{
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+        .wrap{
+
+            width: 400px;
+            margin: auto;
+            height:auto;
+            /* background: rgb(7, 7, 7); */
+            background-image: linear-gradient(to bottom right,#7ff7bb,#c4c5ff);
+            padding: 15px;
+        }
+        input[type=text]{
+            width: 100%;
+            padding: 10%;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        input[type=button]{
+            width: 89px;
+            padding: 10px;
+            font-size: 22px;
+            font-weight:bold;
+            border-radius: 5px;
+        }
+        #del{
+            width: 100%;
+        }
+        .calcu{
+           margin-left: 45%;
+           font-family: 'Anton', sans-serif;
+           color: rgb(5, 5, 5);
+           text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="calcu">calculator</h1>
+    <div class="wrap">
+        <form name="cal">
+            <input type="text" name="display" id="result">
+            <br><br>
+            <input type="button" value="9" onclick="displayValue(9)">
+            <input type="button" value="8" onclick="displayValue(8)">
+            <input type="button" value="7" onclick="displayValue(7)">
+            <input type="button" value="+" onclick="displayValue('+')">
+            <br><br>
+            <input type="button" value="6" onclick="displayValue(6)">
+            <input type="button" value="5" onclick="displayValue(5)">
+            <input type="button" value="4" onclick="displayValue(4)">
+            <input type="button" value="-" onclick="displayValue('-')">
+            <br><br>
+            <input type="button" value="3" onclick="displayValue(3)">
+            <input type="button" value="2" onclick="displayValue(2)">
+            <input type="button" value="1" onclick="displayValue(1)">
+            <input type="button" value="*" onclick="displayValue('*')">
+            <br><br>
+            <input type="button" value="0" onclick="displayValue(0)">
+            <input type="button" value="/" onclick="displayValue('/')">
+            <input type="button" value="%" onclick="displayValue('% ')">
+            <input type="button" value="=" onclick="evaluateExpression()">
+            <br><br>
+            <input type="button" value="DELETE" id="del" onclick="clearBox()">
+            <br><br>
+        </form>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
